@@ -98,11 +98,11 @@ export class FormDataService {
   setBankDetails(data: BankDetails) {
     this.isBankFormValid = true;
     this.formData.bankAccountName = data.bankAccountName;
-    this.formData.bankAccountName = data.bankAccountNumber;
-    this.formData.bankAccountName = data.bank;
-    this.formData.bankAccountName = data.bankCode;
-    this.formData.bankAccountName = data.bankBranch;
-    this.formData.bankAccountName = data.bankBranchCode;
+    this.formData.bankAccountNumber = data.bankAccountNumber;
+    this.formData.bank = data.bank;
+    this.formData.bankCode = data.bankCode;
+    this.formData.bankBranch = data.bankBranch;
+    this.formData.bankBranchCode = data.bankBranchCode;
   }
 
   getLoanParticulars(): LoanParticlars {
