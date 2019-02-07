@@ -1,3 +1,89 @@
-<p>
-  employment works!
-</p>
+<!-- Default form login -->
+<h3 class="mb-4">Employment Details</h3>
+<form #employmentForm="ngForm" class="text-center">
+
+  <div class="form-row mb-4">
+    <div class="col">
+      <input type="text" class="form-control" #employmentEmployer="ngModel" placeholder="Employer" required
+             name="employmentEmployer" [(ngModel)]="employment.employmentEmployer">
+      <p class="text-danger text-left" [hidden]="employmentEmployer.valid"> Employer is required</p>
+    </div>
+  </div>
+
+  <div class="form-row mb-4">
+    <div class="col">
+      <input type="text" class="form-control " #employmentPhysicalAddress="ngModel" name="employmentPhysicalAddress" required
+             placeholder="Employment Physical Address" [(ngModel)]="employment.employmentPhysicalAddress">
+      <p class="text-danger text-left" [hidden]="employmentPhysicalAddress.valid"> Employment Physical Address is required</p>
+    </div>
+
+    <div class="col">
+      <input type="text" class="form-control " #employmentPostalAddress="ngModel" placeholder="Employment Physical Address" required
+             name="employmentPostalAddress" [(ngModel)]="employment.employmentPostalAddress">
+      <p class="text-danger text-left" [hidden]="employmentPostalAddress.valid"> Employment Physical Address is required</p>
+    </div>
+
+  </div>
+
+  <div class="form-row mb-4">
+    <div class="col">
+      <input type="text" class="form-control " #employmentTel="ngModel" placeholder="Employment Tel" required name="employmentTel"
+             [(ngModel)]="employment.employmentTel">
+      <p class="text-danger text-left" [hidden]="employmentTel.valid"> Employment Tel is required</p>
+    </div>
+  </div>
+
+  <div class="form-row mb-4">
+    <div class="col">
+      <input type="text" class="form-control " #employmentDesignation="ngModel" placeholder="Employment Designation" required name="employmentDesignation"
+             [(ngModel)]="employment.employmentDesignation">
+      <p class="text-danger text-left" [hidden]="employmentDesignation.valid"> Employment Designation is required</p>
+    </div>
+  </div>
+
+  <div class="form-row mb-4">
+    <div class="col">
+      <input type="text" class="form-control " #employmentStaffNumber="ngModel" placeholder="Employment Staff Number" required name="employmentStaffNumber"
+             [(ngModel)]="employment.employmentStaffNumber">
+      <p class="text-danger text-left" [hidden]="employmentStaffNumber.valid"> Employment Staff Number is required</p>
+    </div>
+  </div>
+
+  <div class="form-row mb-4">
+    <div class="col">
+      <input type="text" class="form-control " #employmentTerms="ngModel" placeholder="Employment Terms" required name="employmentTerms"
+             [(ngModel)]="employment.employmentTerms">
+      <p class="text-danger text-left" [hidden]="employmentTerms.valid"> Employment Terms is required</p>
+    </div>
+  </div>
+
+  <div class="form-row mb-4">
+    <div class="col">
+      <input type="text" class="form-control " #employmentBusinessType="ngModel" placeholder="Employment Business Type" required name="employmentBusinessType"
+             [(ngModel)]="employment.employmentBusinessType">
+      <p class="text-danger text-left" [hidden]="employmentBusinessType.valid"> Employment Business Type is required</p>
+    </div>
+  </div>
+
+  <div class="form-row mb-4">
+    <div class="col">
+      <input type="text" class="form-control " #employmentBusinessYearsOfOperation="ngModel" placeholder="Employment Business Years of Operation" required name="employmentBusinessYearsOfOperation"
+             [(ngModel)]="employment.employmentBusinessYearsOfOperation">
+      <p class="text-danger text-left" [hidden]="employmentBusinessYearsOfOperation.valid"> Employment Years of Operation is required</p>
+    </div>
+  </div>
+
+  <div class="form-row mb-4">
+    <div class="col">
+      <input type="text" class="form-control " #employmentBusinessIncome="ngModel" placeholder="Employment Business Income " required name="employmentBusinessIncome"
+             [(ngModel)]="employment.employmentBusinessIncome">
+      <p class="text-danger text-left" [hidden]="employmentBusinessIncome.valid"> Employment Business Income is required</p>
+    </div>
+  </div>
+
+
+  <button mdbBtn color="info" block="true" class="my-4" type="button" (click)="continue(employmentForm)">Continue</button>
+
+</form>
+<!-- Default form login -->
+

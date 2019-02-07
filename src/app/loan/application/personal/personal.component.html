@@ -1,3 +1,114 @@
-<p>
-  personal works!
-</p>
+<!-- Default form login -->
+<h3 class="mb-4">Personal Details</h3>
+<form #personalForm="ngForm" class="text-center">
+
+  <div class="form-row mb-4">
+    <div class="col">
+      <input type="text" class="form-control" #membershipNumber="ngModel" placeholder="Membership Number" required
+             name="membershipNumber" [(ngModel)]="personal.membershipNumber">
+      <p class="text-danger text-left" [hidden]="membershipNumber.valid"> Membership is required</p>
+    </div>
+  </div>
+
+  <div class="form-row mb-4">
+    <div class="col">
+      <input type="text" class="form-control " #firstname="ngModel" name="firstneme" required
+             placeholder="First Name" [(ngModel)]="personal.firstName">
+      <p class="text-danger text-left" [hidden]="firstname.valid"> First Name is required</p>
+    </div>
+
+    <div class="col">
+      <input type="text" class="form-control " #middleName="ngModel" placeholder="Middle Name" required
+             name="middleName" [(ngModel)]="personal.middleName">
+      <p class="text-danger text-left" [hidden]="middleName.valid"> Middle Name is required</p>
+    </div>
+
+    <div class="col">
+      <input type="text" class="form-control " #lastName="ngModel" placeholder="Last Name" required name="lastName"
+             [(ngModel)]="personal.lastName">
+      <p class="text-danger text-left" [hidden]="lastName.valid"> Last Name is required</p>
+    </div>
+  </div>
+  <div class="form-row mb-4">
+    <div class="col">
+      <select class="browser-default custom-select " #maritalStatus=ngModel name="maritalStatus" required
+              [(ngModel)]="personal.maritalStatus">
+        <option selected>Marital Status</option>
+        <option value="Single">Single</option>
+        <option value="Married">Married</option>
+        <option value="Widowed">Widowed</option>
+        <option value="Others">Others</option>
+      </select>
+      <p class="text-danger text-left" [hidden]="maritalStatus.valid"> Marital Status is required</p>
+
+    </div>
+  </div>
+  <div class="form-row mb-4">
+    <div class="col">
+      <input type="text" class="form-control " #idNumber="ngModel" placeholder="Id Number / Passport Number"
+             required name="idNumber" [(ngModel)]="personal.idNumber">
+      <p class="text-danger text-left" [hidden]="idNumber.valid"> Id Number is required</p>
+    </div>
+
+
+    <div class="col">
+      <input type="date" class="form-control" #dob="ngModel" placeholder="Date of Birth" required name="dob"
+             [(ngModel)]="personal.dob">
+      <p class="text-danger text-left" [hidden]="dob.valid"> Date of Birth is required</p>
+    </div>
+  </div>
+
+  <div class="form-row mb-4">
+    <div class="col">
+      <input type="tel" class="form-control " #pinNumber="ngModel" placeholder="Pin Number" required name="pinNumber"
+             [(ngModel)]="personal.pinNumber">
+      <p class="text-danger text-left" [hidden]="pinNumber.valid"> Pin Number is required</p>
+    </div>
+  </div>
+
+  <div class="form-row mb-4">
+    <div class="col">
+      <input type="email" class="form-control" #email="ngModel" placeholder="Email" required name="email"
+             [(ngModel)]="personal.email">
+      <p class="text-danger text-left" [hidden]="email.valid"> Email is required</p>
+    </div>
+  </div>
+
+  <div class="form-row mb-4">
+    <div class="col">
+      <input type="tel" class="form-control " #officeTelNumber="ngModel" placeholder="Office Tel Number" required
+             [(ngModel)]="personal.officeTelNumber" name="officeTelNumber">
+      <p class="text-danger text-left" [hidden]="officeTelNumber.valid"> Office Tel Number is required</p>
+    </div>
+
+    <div class="col">
+      <input type="tel" class="form-control " #mobileNumber="ngModel" placeholder="Mobile Number" required
+             name="mobileNumber" [(ngModel)]="personal.mobileNumber">
+      <p class="text-danger text-left" [hidden]="mobileNumber.valid"> Mobile Number is required</p>
+    </div>
+  </div>
+
+
+  <div class="form-row mb-4">
+    <div class="col">
+      <input type="text" class="form-control " #physicalAddress="ngModel" required placeholder="Physical Address"
+             name="physicalAddress" [(ngModel)]="personal.physicalAddress">
+      <p class="text-danger text-left" [hidden]="physicalAddress.valid"> Physical Address is required</p>
+    </div>
+
+    <div class="col">
+      <input type="text" class="form-control " #homeAddress="ngModel" placeholder="Home Address" required
+             name="homeAddress" [(ngModel)]="personal.homeAddress">
+      <p class="text-danger text-left " [hidden]="homeAddress.valid"> Home Address is required</p>
+    </div>
+  </div>
+
+  <input type="number" class="form-control " #dependants="ngModel" placeholder="Number of Dependants" required
+         name="dependants" [(ngModel)]="personal.dependants">
+  <p class="text-danger text-left mb-4" [hidden]="dependants.valid"> Number of Dependants is required</p>
+
+
+  <button mdbBtn color="info" block="true" class="my-4" type="button" (click)="continue(personalForm)">Continue</button>
+
+</form>
+<!-- Default form login -->

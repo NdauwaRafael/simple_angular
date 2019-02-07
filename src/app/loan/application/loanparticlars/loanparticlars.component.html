@@ -1,3 +1,44 @@
-<p>
-  loanparticlars works!
-</p>
+<!-- Default form login -->
+<h3 class="mb-4">Employment Details</h3>
+<form #loanForm="ngForm" class="text-center">
+
+  <div class="form-row mb-4">
+    <div class="col">
+
+      <select class="browser-default custom-select " placeholder="Loan Type" #loanType=ngModel name="loanType" required
+              [(ngModel)]="loan.loanType">
+        <option selected value="">Loan Type</option>
+        <option value="Normal loan">Normal loan:</option>
+        <option value="Development loan">Development loan</option>
+        <option value="Emergency/school fees loan">Emergency/school fees loan</option>
+        <option value="Others">Others</option>
+      </select>
+
+      <p class="text-danger text-left" [hidden]="loanType.valid"> Loan Type is required</p>
+    </div>
+
+  </div>
+
+  <div class="form-row mb-4">
+    <div class="col">
+      <input type="text" class="form-control " #loanAmount="ngModel" name="bankAccountNumber" required
+             placeholder="Loan Amount" [(ngModel)]="loan.loanAmount">
+      <p class="text-danger text-left" [hidden]="loanAmount.valid"> Loan Amount is required</p>
+    </div>
+  </div>
+
+
+  <div class="form-row mb-4">
+    <div class="col">
+      <textarea type="text" class="form-control mb-1 " #loanPurpose="ngModel" name="loanPurpose" required
+                placeholder="Loan Purpose " [(ngModel)]="loan.loanPurpose" rows="10"></textarea>
+      <p class="text-danger text-left" [hidden]="loanPurpose.valid"> Loan Purpose is required</p>
+    </div>
+  </div>
+
+  <button mdbBtn color="info" block="true" class="my-4" type="button" (click)="continue(loanForm)">Continue</button>
+
+</form>
+<!-- Default form login -->
+
+

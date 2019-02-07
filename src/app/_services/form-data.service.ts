@@ -83,7 +83,7 @@ export class FormDataService {
     this.formData.employmentBusinessIncome = data.employmentBusinessIncome;
   }
 
-  getBusiness(): BankDetails {
+  getBankDetails(): BankDetails {
     const bakDetails: BankDetails = {
       bankAccountName: this.formData.bankAccountName,
       bankAccountNumber: this.formData.bankAccountNumber,
@@ -95,7 +95,7 @@ export class FormDataService {
     return bakDetails;
   }
 
-  setBusiness(data: BankDetails) {
+  setBankDetails(data: BankDetails) {
     this.isBankFormValid = true;
     this.formData.bankAccountName = data.bankAccountName;
     this.formData.bankAccountName = data.bankAccountNumber;

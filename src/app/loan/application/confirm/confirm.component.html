@@ -1,3 +1,152 @@
-<p>
-  confirm works!
-</p>
+<h3>Confirm Details</h3>
+
+<table mdbTable bordered="true" *ngIf="formValid">
+
+  <tbody>
+  <tr>
+    <th >Membership Number:</th>
+    <td>{{formData.membershipNumber}}</td>
+  </tr>
+  <tr>
+    <th >First Name:</th>
+    <td>{{formData.firstName}}</td>
+  </tr>
+  <tr>
+    <th >Middle Name:</th>
+    <td>{{formData.middleName}}</td>
+  </tr>
+  <tr>
+    <th >Last Name:</th>
+    <td>{{formData.lastName}}</td>
+  </tr>
+  <tr>
+    <th >Marital Status:</th>
+    <td>{{formData.idNumber}}</td>
+  </tr>
+  <tr>
+    <th >Id Number / Passport Number:</th>
+    <td>{{formData.dob}}</td>
+  </tr>
+  <tr>
+    <th >Date of Birth:</th>
+    <td>{{formData.homeAddress}}</td>
+  </tr>
+  <tr>
+    <th >Pin Number:</th>
+    <td>{{formData.officeTelNumber}}</td>
+  </tr>
+  <tr>
+    <th >Email:</th>
+    <td>{{formData.pinNumber}}</td>
+  </tr>
+  <tr>
+    <th >Office Tel Number:</th>
+    <td>{{formData.mobileNumber}}</td>
+  </tr>
+  <tr>
+    <th >Mobile Number:</th>
+    <td>{{formData.email}}</td>
+  </tr>
+  <tr>
+    <th >Physical Address:</th>
+    <td>{{formData.physicalAddress}}</td>
+  </tr>
+  <tr>
+    <th >Home Address:</th>
+    <td>{{formData.maritalStatus}}</td>
+  </tr>
+  <tr>
+    <th >Number of Dependants:</th>
+    <td>{{formData.dependants}}</td>
+  </tr>
+  <tr>
+    <th >Employer</th>
+    <td>{{formData.employmentEmployer}}</td>
+  </tr>
+  <tr>
+    <th >Employment Physical Address</th>
+    <td>{{formData.employmentPhysicalAddress}}</td>
+  </tr>
+  <tr>
+    <th >Employment Physical Address</th>
+    <td>{{formData.employmentPostalAddress}}</td>
+  </tr>
+  <tr>
+    <th >Employment Tel</th>
+    <td>{{formData.employmentTel}}</td>
+  </tr>
+  <tr>
+    <th >Employment Designation</th>
+    <td>{{formData.employmentDesignation}}</td>
+  </tr>
+  <tr>
+    <th >Employment Staff Number</th>
+    <td>{{formData.employmentStaffNumber}}</td>
+  </tr>
+  <tr>
+    <th >Employment Terms</th>
+    <td>{{formData.employmentTerms}}</td>
+  </tr>
+  <tr>
+    <th >Employment Business Type</th>
+    <td>{{formData.employmentBusinessType}}</td>
+  </tr>
+  <tr>
+    <th >Employment Business Years of Operation</th>
+    <td>{{formData.employmentBusinessYearsOfOperation}}</td>
+  </tr>
+  <tr>
+    <th >Employment Business Income</th>
+    <td>{{formData.employmentBusinessIncome}}</td>
+  </tr>
+  <tr>
+    <th >Bank Account Name</th>
+    <td>{{formData.bankAccountName}}</td>
+  </tr>
+  <tr>
+    <th >Bank Account Number</th>
+    <td>{{formData.bankAccountNumber}}</td>
+  </tr>
+  <tr>
+    <th >Bank Name</th>
+    <td>{{formData.bank}}</td>
+  </tr>
+  <tr>
+    <th >Bank Code</th>
+    <td>{{formData.bankCode}}</td>
+  </tr>
+  <tr>
+    <th >Bank Branch</th>
+    <td>{{formData.bankBranch}}</td>
+  </tr>
+  <tr>
+    <th >Bank Branch Code</th>
+    <td>{{formData.bankBranchCode}}</td>
+  </tr>
+  <tr>
+    <th >Loan Type</th>
+    <td>{{formData.loanType}}</td>
+  </tr>
+  <tr>
+    <th >Loan Amount</th>
+    <td>{{formData.loanPurpose}}</td>
+  </tr>
+  <tr>
+    <th >Loan Purpose</th>
+    <td>{{formData.loanAmount}}</td>
+  </tr>
+
+  </tbody>
+</table>
+
+
+
+<button mdbBtn color="success" *ngIf="formValid" [disabled]="!formValid" block="true" class="my-4" type="button" (click)="submit()">Submit Form Data</button>
+
+<section class="text-center" *ngIf="!formValid">
+
+  <h2 class="h1 py-5 font-weight-bold">This page is empty!</h2>
+
+  <p class="px-5 mb-5 pb-3 lead grey-text">Fill the loan for, and from this page you will be able to submit your form Data.</p>
+
+</section>

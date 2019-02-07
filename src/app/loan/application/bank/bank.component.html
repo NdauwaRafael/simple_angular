@@ -1,3 +1,57 @@
-<p>
-  bank works!
-</p>
+<!-- Default form login -->
+<h3 class="mb-4">Employment Details</h3>
+<form #bankForm="ngForm" class="text-center">
+
+
+  <div class="form-row mb-4">
+    <div class="col">
+      <input type="text" class="form-control " #bankAccountName="ngModel" name="bankAccountName" required
+             placeholder="Bank Account Name" [(ngModel)]="bank.bankAccountName">
+      <p class="text-danger text-left" [hidden]="bankAccountName.valid"> Bank Account Name is required</p>
+    </div>
+
+    <div class="col">
+      <input type="text" class="form-control " #bankAccountNumber="ngModel" name="bankAccountNumber" required
+             placeholder="Bank Account Number" [(ngModel)]="bank.bankAccountNumber">
+      <p class="text-danger text-left" [hidden]="bankAccountNumber.valid"> Bank Account Number is required</p>
+    </div>
+
+  </div>
+
+  <div class="form-row mb-4">
+    <div class="col">
+      <input type="text" class="form-control " #bank="ngModel" name="bank" required
+             placeholder="Bank Name" [(ngModel)]="bank.bank">
+      <p class="text-danger text-left" [hidden]="bank.valid"> Bank Name is required</p>
+    </div>
+
+    <div class="col">
+      <input type="text" class="form-control " #bankCode="ngModel" name="bankCode" required
+             placeholder="Bank Code" [(ngModel)]="bank.bankCode">
+      <p class="text-danger text-left" [hidden]="bankCode.valid"> Bank Code is required</p>
+    </div>
+
+  </div>
+
+
+  <div class="form-row mb-4">
+    <div class="col">
+      <input type="text" class="form-control " #bankBranch="ngModel" name="bankBranch" required
+             placeholder="Bank Branch" [(ngModel)]="bank.bankBranch">
+      <p class="text-danger text-left" [hidden]="bankBranch.valid"> Bank Branch is required</p>
+    </div>
+
+    <div class="col">
+      <input type="text" class="form-control " #bankBranchCode="ngModel" name="bankBranchCode" required
+             placeholder="Bank Branch Code " [(ngModel)]="bank.bankBranchCode">
+      <p class="text-danger text-left" [hidden]="bankBranchCode.valid"> Bank Branch Code is required</p>
+    </div>
+  </div>
+
+
+  <button mdbBtn color="info" block="true" class="my-4" type="button" (click)="continue(bankForm)">Continue</button>
+
+</form>
+<!-- Default form login -->
+
+
