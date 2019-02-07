@@ -1,0 +1,45 @@
+.round-tabs {
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  display: inline-block;
+  border-radius: 100px;
+  background: white;
+  text-align: center;
+  font-size: 25px;
+
+  &.one {
+    color: rgb(34, 194, 34);border: 2px solid rgb(34, 194, 34);
+  }
+
+  &.two{
+    color: #febe29;border: 2px solid #febe29;
+  }
+
+  &.three{
+    color: #3e5e9a;border: 2px solid #3e5e9a;
+  }
+
+  &.four{
+    color: #f1685e;border: 2px solid #f1685e;
+  }
+&.five{
+  color: #999;border: 2px solid #999;
+}
+
+}
+
+.nav-link {
+  &.active {
+    .round-tabs {
+        background: #fff !important;
+        border: 2px solid #ddd;
+    }
+  }
+}
+.navigation_carret {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

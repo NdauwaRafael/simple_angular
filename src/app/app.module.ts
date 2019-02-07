@@ -10,6 +10,9 @@ import { BusinessComponent } from './loan/application/business/business.componen
 import { LoanparticlarsComponent } from './loan/application/loanparticlars/loanparticlars.component';
 import { LoaninotherbanksComponent } from './loan/application/loaninotherbanks/loaninotherbanks.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
+import { BankComponent } from './loan/application/bank/bank.component';
+import { EmploymentComponent } from './loan/application/employment/employment.component';
+import { ConfirmComponent } from './loan/application/confirm/confirm.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
     BusinessComponent,
     LoanparticlarsComponent,
     LoaninotherbanksComponent,
-    NavbarComponent
+    NavbarComponent,
+    BankComponent,
+    EmploymentComponent,
+    ConfirmComponent
   ],
   imports: [
     BrowserModule,

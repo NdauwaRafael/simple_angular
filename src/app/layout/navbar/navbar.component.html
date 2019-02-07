@@ -1,46 +1,68 @@
-<div class="board-inner" id="status-buttons">
-  <ul class="nav nav-tabs" id="myTab">
-    <div class="liner"></div>
-
-    <!-- circular user icon -->
-    <li>
-      <a routerLink="/personal" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" data-toggle="tab" title="personal">
+<ul class="nav justify-content-start grey lighten-4 py-4">
+  <li class="nav-item">
+    <a routerLink="/personal" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+       data-toggle="tab"
+       title="personal">
                 <span class="round-tabs one">
-                    <i class="glyphicon glyphicon-user"></i>
+                    <i class="fa fa-user" aria-hidden="true"></i>
                 </span>
-      </a>
-    </li>
+    </a>
+  </li>
 
-    <!-- circular tasks icon -->
-    <li>
-      <a routerLink="/work" routerLinkActive="active" data-toggle="tab" title="work">
+  <li class="nav-item navigation_carret">
+    <a class="nav-link">
+      <i class="fa fa-caret-right" aria-hidden="true"></i>
+    </a>
+  </li>
+
+  <li class="nav-item">
+    <a routerLink="/employment" class="nav-link" routerLinkActive="active" data-toggle="tab" title="work">
                 <span class="round-tabs two">
-                    <i class="glyphicon glyphicon-tasks"></i>
+                    <i class="fa fa-briefcase" aria-hidden="true"></i>
                 </span>
-      </a>
-    </li>
+    </a>
+  </li>
 
-    <!-- circular home icon -->
-    <li>
-      <a routerLink="/address" routerLinkActive="active" data-toggle="tab" title="address">
+  <li class="nav-item navigation_carret">
+    <a class="nav-link">
+      <i class="fa fa-caret-right" aria-hidden="true"></i>
+    </a>
+  </li>
+
+  <li class="nav-item">
+    <a routerLink="/bank" class="nav-link" routerLinkActive="active" data-toggle="tab" title="work">
                 <span class="round-tabs three">
-                    <i class="glyphicon glyphicon-home"></i>
+                    <i class="fa fa-university" aria-hidden="true"></i>
                 </span>
-      </a>
-    </li>
+    </a>
+  </li>
 
-    <!-- circular ok icon -->
-    <li>
-      <a routerLink="/result" routerLinkActive="active" data-toggle="tab" title="completed">
+  <li class="nav-item navigation_carret">
+    <a class="nav-link">
+      <i class="fa fa-caret-right" aria-hidden="true"></i>
+    </a>
+  </li>
+
+  <li class="nav-item">
+    <a routerLink="/particulars" class="nav-link" routerLinkActive="active" title="address">
                 <span class="round-tabs four">
-                    <i class="glyphicon glyphicon-ok"></i>
+                    <i class="fa fa-list-ol" aria-hidden="true"></i>
                 </span>
-      </a>
-    </li>
+    </a>
+  </li>
 
-  </ul>
-  <div class="clearfix"></div>
-</div>
+  <li class="nav-item navigation_carret">
+    <a class="nav-link">
+      <i class="fa fa-caret-right" aria-hidden="true"></i>
+    </a>
+  </li>
 
-<!-- Close the Splash screen -->
-<script src="content/js/loading-bars.js"></script>
+  <li class="nav-item">
+    <a routerLink="/confirm" class="nav-link" routerLinkActive="active" data-toggle="tab" title="completed">
+                <span class="round-tabs five">
+                    <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                </span>
+    </a>
+  </li>
+</ul>
+
