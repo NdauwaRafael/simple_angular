@@ -15,13 +15,13 @@ export class LoanService {
     return false;
   }
 
-  register(loan: Loan) {
-    return false;
-  }
-
-  update(loan: Loan) {
-    return false;
-  }
+  // register(loan: Loan) {
+  //   return false;
+  // }
+  //
+  // update(loan: Loan) {
+  //   return false;
+  // }
 
   delete(id: number) {
     return false;
